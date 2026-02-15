@@ -11,5 +11,7 @@ services:
   app:
     build: .
     container_name: iwashere
+    environment:
+      - DATABASE_URL=postgresql://postgres:password@postgres:5432/iwashere
     depends_on:
       - postgres
